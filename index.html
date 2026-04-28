@@ -8,7 +8,7 @@
     body {
         margin: 0;
         font-family: Arial, sans-serif;
-        background-color: #f4f4f4; /* first page stays same */
+        background-color: white; /* first page stays same */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -16,23 +16,26 @@
         flex-direction: column;
     }
 
-    /* NEW: black background for certificate page */
+    /* black background for certificate page */
     .certificate-bg {
         background-color: #000;
     }
+    #homePage {
+        transform: translateY(-80px);
+    }
 
     .btn {
-        background-color: #002b5c;
+        background-color: #3B6FB1; /* UPDATED COLOR */
         color: white;
-        padding: 15px 30px;
-        font-size: 18px;
+        padding: 12px 40px;
+        font-size: 15px;
         border: none;
         border-radius: 8px;
         cursor: pointer;
     }
 
     .btn:hover {
-        background-color: #001f40;
+        background-color: #2f5c95; /* smoother darker hover */
     }
 
     #certificatePage {
@@ -77,7 +80,7 @@ if (id === validID) {
     document.getElementById("homePage").style.display = "none";
     document.getElementById("certificatePage").style.display = "block";
 
-    // NEW: change bac
+    // change background to black
     document.body.classList.add("certificate-bg");
 }
 </script>
