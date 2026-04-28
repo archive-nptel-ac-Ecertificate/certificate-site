@@ -8,12 +8,17 @@
     body {
         margin: 0;
         font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
+        background-color: #f4f4f4; /* first page stays same */
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
         flex-direction: column;
+    }
+
+    /* NEW: black background for certificate page */
+    .certificate-bg {
+        background-color: #000;
     }
 
     .btn {
@@ -59,7 +64,7 @@
 // Your certificate ID
 const validID = "NPTEL25CS147S86490089410783285";
 
-// Function when button is clicked
+// Button click → go to URL
 function openCertificate() {
     window.location.href = "?q=" + validID;
 }
@@ -71,6 +76,9 @@ const id = params.get("q");
 if (id === validID) {
     document.getElementById("homePage").style.display = "none";
     document.getElementById("certificatePage").style.display = "block";
+
+    // NEW: change bac
+    document.body.classList.add("certificate-bg");
 }
 </script>
 
